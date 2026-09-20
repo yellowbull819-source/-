@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ブラウザで遊べる横スクロールアクションゲーム">
+  <title>Skybound Run</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    ようこそ私のページへ！aaaaa
+  <main class="game-shell">
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">MINI ACTION / MVP</p>
+        <h1>Skybound Run</h1>
+      </div>
+      <button id="restart-button" class="restart-button" type="button">最初から</button>
+    </header>
+
+    <section class="game-card" aria-label="ゲーム画面">
+      <div class="hud">
+        <span>コイン <strong id="coin-count">0</strong></span>
+        <span>距離 <strong id="distance-count">0</strong>m</span>
+        <span>ハート <strong id="life-count">3</strong></span>
+      </div>
+      <canvas id="game-canvas" width="960" height="540">
+        お使いのブラウザはCanvasに対応していません。
+      </canvas>
+      <div id="message" class="message" aria-live="polite">
+        <strong>SKYBOUND RUN</strong>
+        <span>← → / A D で移動　・　↑ / W / Space でジャンプ</span>
+      </div>
+    </section>
+
+    <footer class="instructions">
+      <span><kbd>←</kbd><kbd>→</kbd> 移動</span>
+      <span><kbd>Space</kbd> ジャンプ</span>
+      <span>敵や穴に注意して、旗を目指そう！</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
